@@ -1,15 +1,10 @@
 // Реалізувати рекурсивну функцію, яка зводить число в ступінь.
-//
 // Число, яке потрібно звести в ступінь, передається як перший аргумент у функцію
-//
 // Ступінь передається як другий аргумент у функцію
-//
 // pow(num, degree)
 
 function pow(num, degree) {
-  if (degree === 1) {
-    return num;
-  } else if (degree === 0) {   // якщо зводимо до нульової степені
+if (degree === 0) {   // будь-яке число в нульовому степені === 1
     return 1;
   } else if (degree < 0) {
     return  1 / num * pow(num, degree + 1)
@@ -17,7 +12,6 @@ function pow(num, degree) {
   return num * pow(num, degree - 1);
   }
 }
-
 
 
 console.log("2 ** 1 = ", pow(2, 1));             //  2 в 1 степені    === 2
